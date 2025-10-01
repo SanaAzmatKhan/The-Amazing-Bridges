@@ -115,31 +115,19 @@
     }
   </style>
   <script>
-    function checkvalue() {
+  function checkvalue() {
+    // Simple email regex
+    var reg = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
-      var reg =/^([A-Za-z0-9\@\-\_\.])+\@([A-Za-z] {
-      4, 8
+    var email = document.getElementById('email').value;
 
-    }) +\.([A - Za - z] {
-      2, 4
-    }) $ /;
-
-    var email;
-    email = document.getElementById('email').value;
-
-
-    if (reg.test(email) == true) {
-
-      alert("Thank You For Your FeedBack !");
-
+    if (reg.test(email)) {
+      alert("Thank You For Your Feedback!");
+    } else {
+      alert("Please Enter A Correct Email");
     }
-
-    else {
-      alert("Please Enter The Correct Email");
-    }
-    }
-
-  </script>
+  }
+</script>
 
 </head>
 
